@@ -1,5 +1,7 @@
 EKS_CONFIG:=cluster.yaml
 
+default: help
+
 .PHONY: spin-up
 spin-up: ## create the eks cluster with all the required services in it
 	eksctl create cluster -f $(EKS_CONFIG)
